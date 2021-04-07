@@ -1,0 +1,123 @@
+@use "colors";
+@use "fonts";
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  padding: 0.3rem;
+  &:focus {
+    outline: none;
+  }
+}
+
+.nav {
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%) scale(0) rotate(360deg);
+  background-color: #fff;
+  font-family: fonts.$Ubuntu;
+  padding: 2rem;
+  width: 90%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: colors.$Very-dark-blue-headings;
+  transform-origin: right top;
+  transition: transform 0.5s linear;
+}
+nav.show {
+  transform: translateX(-50%) scale(1);
+}
+
+li {
+  list-style-type: none;
+}
+.nav-list {
+  width: 100%;
+  text-align: center;
+}
+.nav-dropdown-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  img {
+    margin-left: 0.5rem;
+    transition-property: transform, opacity;
+    transition: 0.3s linear;
+  }
+  &:hover {
+    opacity: 0.8;
+    img {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.nav-dropdown-list {
+  height: 0;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 0.5s ease;
+  background-color: rgba(#eee, 0.8);
+  width: 100%;
+  padding: 1rem 0;
+  opacity: 0;
+  li {
+    margin: 1rem 0;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem 0;
+    opacity: 0.8;
+  }
+}
+
+.nav-dropdown-item:hover + .nav-dropdown-list {
+  height: auto;
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(#eee, 0.8);
+
+  .btn {
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 3rem;
+    font-weight: 500;
+  }
+  .login-btn {
+    margin-bottom: 1rem;
+    background-color: transparent;
+    color: colors.$Very-dark-blue-headings;
+  }
+
+  .signup-btn {
+    background: linear-gradient(colors.$Very-light-red, colors.$Light-red);
+    color: #fff;
+  }
+}

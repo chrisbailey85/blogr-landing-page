@@ -1,0 +1,61 @@
+@use "navbar";
+@use "footer";
+@use "colors";
+@use "resets";
+@use "fonts";
+body {
+  font-size: 16px;
+}
+main {
+  min-height: 100vh;
+}
+.banner {
+  background: linear-gradient(colors.$Very-light-red, colors.$Light-red);
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-bottom-left-radius: 100px;
+}
+
+.banner-heading {
+  color: colors.$White-text;
+  font-family: fonts.$Ubuntu;
+  padding: 0 2rem;
+  opacity: 0.9;
+  margin-bottom: 3rem;
+  h1 {
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  p {
+    font-size: 1.1rem;
+    opacity: 0.7;
+  }
+}
+
+.banner-cta {
+  padding: 0 2rem;
+  .cta-btn {
+    padding: 0.5rem 1.3rem;
+    margin: 0 0.5rem;
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: fonts.$Ubuntu;
+    font-weight: 500;
+  }
+  .start-btn {
+    color: colors.$Light-red-cta-text;
+    background-color: #fff;
+  }
+
+  .learn-btn {
+    border: 1px solid #fff;
+  }
+}
