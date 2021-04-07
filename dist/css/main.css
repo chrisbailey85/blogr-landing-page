@@ -36,11 +36,13 @@ header {
   flex-direction: column;
   color: #1f3f5b;
   transform-origin: right top;
-  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, opacity 0.3s ease-in;
+  opacity: 0;
 }
 
 nav.show {
   transform: translateX(-50%) scale(1);
+  opacity: 1;
 }
 
 li {
@@ -91,7 +93,7 @@ li {
   opacity: 0.8;
 }
 
-.nav-dropdown-item:hover + .nav-dropdown-list {
+.nav-list-item:hover > .nav-dropdown-list {
   height: auto;
   transform: scale(1, 1);
   opacity: 1;
@@ -237,7 +239,6 @@ main {
   padding: 0 2rem;
 }
 .banner-cta .cta-btn {
-  padding: 0.5rem 1.3rem;
   margin: 0 0.5rem;
   border-radius: 50px;
   background-color: transparent;
@@ -249,9 +250,12 @@ main {
 .banner-cta .start-btn {
   color: #ff525d;
   background-color: #fff;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.2rem;
 }
 .banner-cta .learn-btn {
   border: 1px solid #fff;
+  padding: 0.5rem 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

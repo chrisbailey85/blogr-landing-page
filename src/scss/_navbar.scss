@@ -38,10 +38,12 @@ header {
   flex-direction: column;
   color: colors.$Very-dark-blue-headings;
   transform-origin: right top;
-  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, opacity 0.3s ease-in;
+  opacity: 0;
 }
 nav.show {
   transform: translateX(-50%) scale(1);
+  opacity: 1;
 }
 
 li {
@@ -90,7 +92,7 @@ li {
   }
 }
 
-.nav-dropdown-item:hover + .nav-dropdown-list {
+.nav-list-item:hover > .nav-dropdown-list {
   height: auto;
   transform: scale(1, 1);
   opacity: 1;
