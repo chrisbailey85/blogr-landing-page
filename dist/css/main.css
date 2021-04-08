@@ -4,7 +4,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -198,8 +198,39 @@ select {
     scroll-behavior: auto !important;
   }
 }
+footer {
+  padding: 2rem 0;
+  background: #25252d;
+  text-align: center;
+  border-top-right-radius: 40px;
+}
+
+.footer-logo {
+  margin-bottom: 2rem;
+}
+.footer-logo img {
+  margin: 0 auto;
+}
+
+.footer-nav-list-item {
+  font-weight: 600;
+  color: #fff;
+  padding: 0.1rem 0;
+  font-family: "Overpass", sans-serif;
+}
+.footer-nav-list-item:first-child {
+  padding: 1.2rem;
+}
+
+.footer-link {
+  color: #c8c8cb;
+  text-decoration: none;
+  font-family: "Overpass", sans-serif;
+}
+
 body {
   font-size: 16px;
+  background-color: #fdfdfd;
 }
 
 main {
@@ -207,8 +238,10 @@ main {
 }
 
 .banner {
-  background: linear-gradient(#ff8f70, #ff3d54);
-  height: 90vh;
+  position: relative;
+  background: url("../images/bg-pattern-intro.svg"), linear-gradient(#ff8f70, #ff3d54);
+  background-position: center;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -236,7 +269,9 @@ main {
 }
 
 .banner-cta {
+  position: relative;
   padding: 0 2rem;
+  z-index: 1;
 }
 .banner-cta .cta-btn {
   margin: 0 0.5rem;
@@ -256,6 +291,94 @@ main {
 .banner-cta .learn-btn {
   border: 1px solid #fff;
   padding: 0.5rem 1.5rem;
+}
+
+.main-sections {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: #1f3f5b;
+}
+.main-sections h1,
+.main-sections h2 {
+  font-family: "Ubuntu", sans-serif;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+.main-sections h1 {
+  font-size: 1.8rem;
+}
+.main-sections h2 {
+  font-size: 1.5rem;
+}
+
+.section-two .img-container {
+  background-image: url("../images/illustration-editor-mobile.svg");
+  width: 100%;
+  height: 331px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 1rem;
+}
+.section-two::after {
+  content: "";
+  background-image: url("../images/illustration-phones.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -400px;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  z-index: 100;
+}
+
+.text-content-block p {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #5a5f63;
+}
+
+.section-three {
+  color: #fff;
+  margin-top: 12rem;
+  padding: 10rem 0 5rem 0;
+  background: linear-gradient(#2c2d3f, #3f4164);
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  overflow: hidden;
+}
+.section-three::after {
+  content: "";
+  background-image: url("/dist/images/bg-pattern-circles.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -230px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.section-three .text-content-block {
+  position: relative;
+  z-index: 500;
+}
+.section-three .text-content-block p {
+  font-family: "Overpass", sans-serif;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+.section-four .img-container {
+  background-image: url("../images/illustration-laptop-mobile.svg");
+  width: 100%;
+  height: 331px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
