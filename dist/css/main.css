@@ -202,14 +202,30 @@ footer {
   padding: 2rem 0;
   background: #25252d;
   text-align: center;
-  border-top-right-radius: 40px;
+  border-top-right-radius: 100px;
 }
 
 .footer-logo {
   margin-bottom: 2rem;
 }
-.footer-logo img {
-  margin: 0 auto;
+@media (min-width: 768px) {
+  .footer-logo {
+    padding-top: 19px;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .footer-nav {
+    flex-direction: row;
+  }
+  .footer-nav ul {
+    height: 100%;
+  }
 }
 
 .footer-nav-list-item {
@@ -235,6 +251,7 @@ body {
 
 main {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .banner {
@@ -312,6 +329,13 @@ main {
   font-size: 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .section-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
 .section-two .img-container {
   background-image: url("../images/illustration-editor-mobile.svg");
   width: 100%;
@@ -319,6 +343,16 @@ main {
   background-size: cover;
   background-position: center;
   margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .section-two .img-container {
+    background-image: url("../images/illustration-editor-desktop.svg");
+    width: 925px;
+    height: 882px;
+    position: relative;
+    left: 300px;
+    top: -100px;
+  }
 }
 .section-two::after {
   content: "";
@@ -333,6 +367,15 @@ main {
   z-index: 100;
 }
 
+.text-content-block {
+  max-width: 60ch;
+}
+@media (min-width: 768px) {
+  .text-content-block {
+    text-align: left;
+    margin-left: 9rem;
+  }
+}
 .text-content-block p {
   font-family: "Overpass", sans-serif;
   font-weight: 300;

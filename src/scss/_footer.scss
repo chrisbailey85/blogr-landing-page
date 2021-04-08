@@ -6,13 +6,26 @@ footer {
   padding: 2rem 0;
   background: colors.$Very-dark-black-blue-footer-background;
   text-align: center;
-  border-top-right-radius: 40px;
+  border-top-right-radius: 100px;
 }
 
 .footer-logo {
   margin-bottom: 2rem;
-  img {
-    margin: 0 auto;
+  @media (min-width: 768px) {
+    padding-top: 19px;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+    ul {
+      height: 100%;
+    }
   }
 }
 
