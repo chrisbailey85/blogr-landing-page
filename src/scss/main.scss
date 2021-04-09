@@ -210,7 +210,7 @@ main {
   }
   &::after {
     content: "";
-    background-image: url("/dist/images/bg-pattern-circles.svg");
+    background-image: url("../images/bg-pattern-circles.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
